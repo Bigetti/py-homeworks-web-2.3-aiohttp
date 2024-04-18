@@ -1,0 +1,45 @@
+### advertisements.rest
+
+POST http://localhost:5000/advertisements
+Content-Type: application/json
+Authorization: Bearer 55555
+
+{
+    "title": "Example Title555",
+    "description": "Example Description5",
+    "owner": "Example Owner"
+}
+
+###Для получения объявления отправьте , где {id} - идентификатор объявления.
+GET http://localhost:5000/advertisements/2
+Authorization: Bearer 55555
+
+
+###Для получения объявлений ВСЕХ отправьте /advertisements
+GET http://localhost:5000/advertisements
+Authorization: Bearer 55555
+
+
+###Для удаления объявления отправьте , где {id} - идентификатор объявления.
+DELETE http://localhost:5000/advertisements/7
+Authorization: Bearer 55555
+
+
+### Авторизация пользователя системы
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "username": "user1",
+    "password": "password1"
+}
+
+
+### Создание пользователя системы
+POST http://localhost:5000/register
+Content-Type: application/json
+
+{
+    "username": "user6",
+    "password": "password1"
+ }

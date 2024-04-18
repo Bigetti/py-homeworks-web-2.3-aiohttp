@@ -1,0 +1,21 @@
+<!-- templates/advertisements.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Все объявления</title>
+</head>
+<body>
+    <h1>Все объявления</h1>
+    <ul>
+        {% for advertisement in advertisements %}
+            <li>
+                <h2>{{ advertisement.title }}</h2>
+                <p>{{ advertisement.description }}</p>
+                <p>Автор: {{ advertisement.owner }}</p>
+                <p>Дата создания: {{ advertisement.creation_date }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
